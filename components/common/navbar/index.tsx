@@ -25,8 +25,8 @@ const Navbar = () => {
         href="/"
         className="text-[#11190C] font-semibold flex gap-3.5 text-xl"
       >
-        <Image src={logo} alt="Drivio Logo" />
-        <span className="font-text">Drivio</span>
+        <Image src={logo} alt="binaryryde Logo" />
+        <span className="font-text">binaryryde</span>
       </Link>
 
       {/* Navigation Links */}
@@ -45,7 +45,7 @@ const Navbar = () => {
 
       {/* Sign Up Button */}
       <CommonButton
-        className="text-[#E6FF02] bg-black font-medium font-text w-[120px] h-[45px] rounded-full hover:opacity-90 transition duration-200"
+        className="text-[#E6FF02] bg-black font-medium font-text w-[120px] h-[45px] rounded-full hover:opacity-90 transition duration-200 cursor-pointer"
         onClick={handleButtonClick}
       >
         Get Code
