@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
 import CommonButton from './button'
 import {ArrowRight} from 'lucide-react'
-import nitromart from '@/assets/nitromart4.png'
+import nitromart from '@/assets/nitromart5.png'
 import Image from 'next/image'
 
 const navItems = [
