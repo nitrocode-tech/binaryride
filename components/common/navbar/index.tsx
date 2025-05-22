@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
 import CommonButton from './button'
-import {ArrowRight} from 'lucide-react'
+import {ArrowRight, ShoppingBag, Store} from 'lucide-react'
 import nitromart from '@/assets/nitromart5.png'
 import Image from 'next/image'
 
@@ -35,9 +35,19 @@ const Navbar = () => {
       }  text-black px-28 py-6 flex justify-between items-center`}
     >
       {/* Logo */}
-      <Link href="/" className="text-black  font-semibold flex gap-3.5 text-xl">
-        {/* <span className="font-text uppercase">Nitro🚀Mart</span> */}
-        <Image src={nitromart} alt="iphone" width={180} />
+      <Link
+        href="/"
+        className="text-black font-extrabold flex gap-2 text-xl items-center tracking-widest "
+      >
+        <ShoppingBag className="text-[#00C2E8]" size={40} />
+        <span className="font-text">NitroMart</span>
+
+        {/* <Image
+          src={nitromart}
+          alt="NitroMart Logo"
+          width={180}
+          className="object-contain" // Ensures image scales properly without background artifacts
+        /> */}
       </Link>
 
       {/* Navigation Links */}
