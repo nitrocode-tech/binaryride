@@ -3,6 +3,8 @@ import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
 import CommonButton from './button'
 import {ArrowRight} from 'lucide-react'
+import nitromart from '@/assets/nitromart4.png'
+import Image from 'next/image'
 
 const navItems = [
   {name: 'Home', path: '/'},
@@ -34,7 +36,8 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link href="/" className="text-black  font-semibold flex gap-3.5 text-xl">
-        <span className="font-text uppercase">Nitro🚀Mart</span>
+        {/* <span className="font-text uppercase">Nitro🚀Mart</span> */}
+        <Image src={nitromart} alt="iphone" width={180} />
       </Link>
 
       {/* Navigation Links */}
