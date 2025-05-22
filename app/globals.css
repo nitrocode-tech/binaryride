@@ -1,13 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
-  --primary: #CFC9BC;
+  --primary: #cfc9bc;
   --navsimple: #222222;
-  --primarytext: #11190C;
-  --secondarytext: #4C4C4C;
-  --yellowshade: #E6FF02;
-  /* fonts */
-  --font-display: "Poppins";
-  --font-text: "Inter"
+  --primarytext: #11190c;
+  --secondarytext: #818e9d;
+  --yellowshade: #e6ff02;
+  --font-display: 'Poppins';
 }

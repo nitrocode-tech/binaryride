@@ -1,32 +1,42 @@
-"use client";
-import Link from "next/link";
-import React from "react";
-import Image from "next/image";
-import logo from "@/assets/svgs/logo.svg";
-import CommonButton from "./button";
+'use client'
+import Link from 'next/link'
+import React, {useEffect, useState} from 'react'
+import CommonButton from './button'
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Pricing", path: "/pricing" },
-  { name: "Contact", path: "/contact" },
-  { name: "Page", path: "/page" },
-  { name: "Blog", path: "/blog" },
-];
+  {name: 'Home', path: '/'},
+  {name: 'Features', path: '/features'},
+  {name: 'Documentation', path: '/documentation'},
+  {name: 'Blog', path: '/blog'},
+]
 
 const Navbar = () => {
-  const handleButtonClick = () => {
-    console.log("Get Code button clicked!");
-  };
+  const [prevScrollY, setPrevScrollY] = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      setVisible(prevScrollY > currentScrollY || currentScrollY < 10)
+      setPrevScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [prevScrollY])
 
   return (
-    <nav className="bg-[var(--primary)] text-white px-10 py-3 flex justify-between items-center">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }  text-white px-28 py-6 flex justify-between items-center`}
+    >
       {/* Logo */}
       <Link
         href="/"
-        className="text-[#11190C] font-semibold flex gap-3.5 text-xl"
+        className="text-white  font-semibold flex gap-3.5 text-xl italic"
       >
-        <Image src={logo} alt="binaryryde Logo" />
-        <span className="font-text">binaryryde</span>
+        <span className="font-text">Nitro🚀Mart</span>
       </Link>
 
       {/* Navigation Links */}
@@ -35,7 +45,7 @@ const Navbar = () => {
           <li key={index}>
             <Link
               href={item.path}
-              className="text-(--navsimple) font-text hover:text-[#11190C] cursor-pointer flex items-center gap-1 p-3 font-medium hover:font-semibold"
+              className="text-[#828E9D] font-text text-md hover:text-white cursor-pointer flex items-center gap-1 p-3 font-light"
             >
               {item.name}
             </Link>
@@ -46,12 +56,12 @@ const Navbar = () => {
       {/* Sign Up Button */}
       <CommonButton
         className="text-[#E6FF02] bg-black font-medium font-text w-[120px] h-[45px] rounded-full hover:opacity-90 transition duration-200 cursor-pointer"
-        onClick={handleButtonClick}
+        onClick={() => console.log('Get Code button clicked!')}
       >
         Get Code
       </CommonButton>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
