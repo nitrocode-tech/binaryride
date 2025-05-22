@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
 import CommonButton from './button'
+import {ArrowRight} from 'lucide-react'
 
 const navItems = [
   {name: 'Home', path: '/'},
@@ -29,14 +30,11 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
-      }  text-white px-28 py-6 flex justify-between items-center`}
+      }  text-black px-28 py-6 flex justify-between items-center`}
     >
       {/* Logo */}
-      <Link
-        href="/"
-        className="text-white  font-semibold flex gap-3.5 text-xl italic"
-      >
-        <span className="font-text">Nitro🚀Mart</span>
+      <Link href="/" className="text-black  font-semibold flex gap-3.5 text-xl">
+        <span className="font-text uppercase">Nitro🚀Mart</span>
       </Link>
 
       {/* Navigation Links */}
@@ -45,7 +43,7 @@ const Navbar = () => {
           <li key={index}>
             <Link
               href={item.path}
-              className="text-[#828E9D] font-text text-md hover:text-white cursor-pointer flex items-center gap-1 p-3 font-light"
+              className="text-[#828E9D] font-text text-md font-light p-3 flex items-center gap-1 cursor-pointer transition-all duration-350 ease-in-out hover:text-black hover:font-medium hover:scale-105"
             >
               {item.name}
             </Link>
@@ -55,7 +53,7 @@ const Navbar = () => {
 
       {/* Sign Up Button */}
       <CommonButton
-        className="text-[#E6FF02] bg-black font-medium font-text w-[120px] h-[45px] rounded-full hover:opacity-90 transition duration-200 cursor-pointer"
+        className="text-white bg-[#00C2E8] font-medium font-text w-[120px] h-[45px] rounded-full hover:opacity-90 transition duration-200 cursor-pointer"
         onClick={() => console.log('Get Code button clicked!')}
       >
         Get Code
