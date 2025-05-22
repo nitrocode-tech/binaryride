@@ -66,10 +66,10 @@ const Navbar = () => {
 
       {/* Sign Up Button */}
       <CommonButton
-        className="text-white bg-[#00C2E8] font-medium font-text w-[120px] h-[45px] rounded-full hover:opacity-90 transition duration-200 cursor-pointer"
+        className="text-white  text-sm  hover:bg-[#00c1e8dc]  bg-[#00C2E8] font-medium font-text px-6 py-3 rounded-full hover:opacity-90 transition duration-200 cursor-pointer"
         onClick={() => console.log('Get Code button clicked!')}
       >
-        Get Code
+        Get It Now
       </CommonButton>
     </nav>
   )
