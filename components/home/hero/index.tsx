@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div>
       {/* hero-text */}
-      <div className="flex items-center justify-center mx-28 pt-32">
+      <div className="flex items-center justify-center mx-28 pt-32 pb-24">
         <div className="w-full flex flex-col mt-[-50px]">
           <div className="inline-block mr-auto mb-7 rounded-full bg-[#e5e5e6] px-5 py-2 text-sm  text-[#646465] tracking-wide uppercase">
             Join the Future
@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
       </div>
       {/* slider */}
-      <div className="mx-28">
+      <div className="">
         <Slider />
       </div>
     </div>

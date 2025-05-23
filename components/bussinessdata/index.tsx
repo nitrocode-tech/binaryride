@@ -24,7 +24,7 @@ const BussinessData = () => {
         {/* Left Content */}
         <div className="w-full lg:w-[54.5%]">
           <div>
-            <h1 className="text-white font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+            <h1 className="text-black font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
               Unlock the power of <br />
               your <span className="text-[var(--yellowshade)]">
                 business
@@ -40,7 +40,7 @@ const BussinessData = () => {
         {/* Right Content */}
         <div className="w-full lg:w-[45.5%] mt-10 lg:mt-52">
           <div className="flex flex-col gap-10">
-            <p className="text-base md:text-lg font-text text-white">
+            <p className="text-base md:text-lg font-text text-black">
               Our platform empowers you to make data-driven decisions that drive
               growth, optimize performance, and maximize profitability
             </p>
@@ -48,7 +48,7 @@ const BussinessData = () => {
               {BussinessCollection.map((item, index) => (
                 <div
                   key={index}
-                  className="text-white text-center sm:text-left"
+                  className="text-black text-center sm:text-left"
                 >
                   <p className="text-3xl md:text-4xl font-medium font-display">
                     {item.value}
